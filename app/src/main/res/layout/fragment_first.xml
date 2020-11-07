@@ -22,13 +22,13 @@
             android:text="@string/parent_fragment_label"
             android:textSize="30sp"
             android:textColor="@color/black"
-            app:layout_constraintBottom_toTopOf="@id/button_next"
+            app:layout_constraintBottom_toTopOf="@id/button_child"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/button_next"
+            android:id="@+id/button_child"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/say_hi_to_child"
@@ -42,7 +42,7 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ImageButton
-        android:id="@+id/button_child"
+        android:id="@+id/button_next"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:background="@drawable/bg_circle_button"
