@@ -22,6 +22,12 @@ class FirstFragment : Fragment() {
 
         childFragmentManager.beginTransaction().replace(R.id.child_fragment_container,ChildFragment()).commit()
 
-        button_next.setOnClickListener { parentFragmentManager.beginTransaction().replace(R.id.fragment_container,SecondFragment()).commit() }
+        button_next.setOnClickListener {
+            parentFragmentManager.beginTransaction()
+                .setCustomAnimations(R.anim.enter_from_right, 0, 0, R.anim.exit_to_right)
+                .add(R.id.fragment_container,SecondFragment())
+                .addToBackStack(null)
+                .commit()
+        }
     }
 }
