@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/purple_200"
     tools:context=".SecondFragment">
 
     <TextView
@@ -12,19 +12,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="30sp"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:text="@string/second_fragment_label"
-        app:layout_constraintBottom_toTopOf="@id/button_second"
+        app:layout_constraintBottom_toTopOf="@id/button_previous"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button_second"
+        android:id="@+id/button_previous"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/say_hi_to_previous"
-        android:backgroundTint="@color/purple_200"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
