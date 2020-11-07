@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.core.os.bundleOf
 import androidx.fragment.app.setFragmentResult
+import androidx.fragment.app.setFragmentResultListener
 import kotlinx.android.synthetic.main.fragment_first.*
 
 
@@ -24,13 +25,18 @@ class FirstFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         //listen result from the ChildFragment through childFragmentManager
-        //Once result receive show the Toast
         childFragmentManager.setFragmentResultListener("key_parent", this) {key, result->
             // get the result from bundle
             val stringResult = result.getString("say_hi_parent")
             Toast.makeText(requireContext(), "$key: $stringResult", Toast.LENGTH_SHORT).show()
         }
 
+        //listen result from the SecondFragment through FragmentManager (same FragmentManager that this fragment exist)
+        setFragmentResultListener("key_previous") {key, result->
+            // get the result from bundle
+            val stringResult = result.getString("say_hi_previous")
+            Toast.makeText(requireContext(), "$key: $stringResult", Toast.LENGTH_SHORT).show()
+        }
 
         //add child fragment
         childFragmentManager.beginTransaction().replace(R.id.child_fragment_container,ChildFragment()).commit()
