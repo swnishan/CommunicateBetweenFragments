@@ -1,8 +1,12 @@
 <resources>
     <string name="app_name">Communicate Between Fragments</string>
+
     <string name="parent_fragment_label">Parent Fragment</string>
     <string name="next_fragment_label">Second Fragment</string>
+    <string name="child_fragment_label">Child Fragment</string>
+
     <string name="next_fragment">Next Fragment</string>
     <string name="previous">Previous</string>
+    <string name="pass_data_to_parent">Pass data to parent fragment</string>
 
 </resources>
