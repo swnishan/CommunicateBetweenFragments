@@ -24,6 +24,10 @@ class FirstFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        //add child fragment
+        childFragmentManager.beginTransaction().replace(R.id.child_fragment_container,ChildFragment()).commit()
+
+
         //listen result from the ChildFragment through childFragmentManager
         childFragmentManager.setFragmentResultListener("key_parent", this) {key, result->
             // get the result from bundle
@@ -38,8 +42,10 @@ class FirstFragment : Fragment() {
             Toast.makeText(requireContext(), "$key: $stringResult", Toast.LENGTH_SHORT).show()
         }
 
-        //add child fragment
-        childFragmentManager.beginTransaction().replace(R.id.child_fragment_container,ChildFragment()).commit()
+        //pass result to the ChildFragment through childFragmentManager when press the button
+        button_child.setOnClickListener {
+            childFragmentManager.setFragmentResult("key_child", bundleOf("say_hi_child" to "Hi child fragment"))
+        }
 
         //show another fragment whn click the next.
         //this will add to the same fragment manager
@@ -51,9 +57,5 @@ class FirstFragment : Fragment() {
                 .commit()
         }
 
-        //pass result to the ChildFragment through childFragmentManager when press the button
-        button_child.setOnClickListener {
-            childFragmentManager.setFragmentResult("key_child", bundleOf("say_hi_child" to "Hi child fragment"))
-        }
     }
 }
