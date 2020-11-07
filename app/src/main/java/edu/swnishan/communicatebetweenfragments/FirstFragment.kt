@@ -18,5 +18,7 @@ class FirstFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        childFragmentManager.beginTransaction().replace(R.id.child_fragment_container,ChildFragment()).commit()
     }
 }
