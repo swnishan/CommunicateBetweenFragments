@@ -8,11 +8,11 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.CommiunicateBetweenFragments">
+        android:theme="@style/Theme.CommunicateBetweenFragments">
         <activity
             android:name="edu.swnishan.communicatebetweenfragments.MainActivity"
             android:label="@string/app_name"
-            android:theme="@style/Theme.CommiunicateBetweenFragments.NoActionBar">
+            android:theme="@style/Theme.CommunicateBetweenFragments.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
