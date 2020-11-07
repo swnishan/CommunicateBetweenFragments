@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import kotlinx.android.synthetic.main.fragment_first.*
 
 
 class FirstFragment : Fragment() {
@@ -20,5 +21,7 @@ class FirstFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         childFragmentManager.beginTransaction().replace(R.id.child_fragment_container,ChildFragment()).commit()
+
+        button_next.setOnClickListener { parentFragmentManager.beginTransaction().replace(R.id.fragment_container,SecondFragment()).commit() }
     }
 }
