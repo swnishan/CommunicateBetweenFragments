@@ -5,7 +5,6 @@
     <string name="second_fragment_label">Second Fragment</string>
     <string name="child_fragment_label">Child Fragment</string>
 
-    <string name="next_fragment">Next Fragment</string>
     <string name="say_hi_to_previous">Say hi to previous fragment</string>
     <string name="say_hi_to_parent">Say hi to parent</string>
     <string name="say_hi_to_child">Say hi to child</string>
