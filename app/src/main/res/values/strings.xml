@@ -7,6 +7,7 @@
 
     <string name="next_fragment">Next Fragment</string>
     <string name="previous">Previous</string>
-    <string name="pass_data_to_parent">Pass data to parent fragment</string>
+    <string name="say_hi_to_parent">Say hi to parent</string>
+    <string name="say_hi_to_child">Say hi to child</string>
 
 </resources>
